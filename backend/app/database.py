@@ -5,6 +5,7 @@ from urllib.parse import quote_plus
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import declarative_base
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -29,6 +30,7 @@ engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
 )
+Base = declarative_base()
 
 SessionLocal = sessionmaker(
     autocommit=False,

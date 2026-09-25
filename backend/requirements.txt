@@ -1,3 +1,4 @@
+alembic==1.20.0
 annotated-doc==0.0.5
 annotated-types==0.8.0
 anyio==4.15.1
@@ -5,13 +6,18 @@ certifi==2026.7.22
 click==8.5.0
 cloudinary==1.46.2
 fastapi==0.141.1
+GeoAlchemy2==0.20.0
 h11==0.16.0
 idna==3.20
+Mako==1.4.3
+MarkupSafe==3.0.3
+packaging==26.3
 psycopg==3.3.6
 psycopg-binary==3.3.6
 pydantic==2.13.5
 pydantic_core==2.46.5
 python-dotenv==1.2.3
+python-multipart==0.0.32
 six==1.17.0
 SQLAlchemy==2.1.0
 starlette==1.7.0
