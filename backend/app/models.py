@@ -58,7 +58,7 @@ class Location(Base):
     id = Column(UUID(as_uuid=False), primary_key=True, default=gen_uuid)
     project_id = Column(UUID(as_uuid=False), ForeignKey("projects.id"), nullable=False)
     name = Column(String)
-    geom = Column(Geometry(geometry_type="POINT", srid=4326))  # lat/lng point
+    geom = Column(Geometry(geometry_type="POINT", srid=4326, spatial_index=False))  # lat/lng point
 
     project = relationship("Project", back_populates="locations")
     assets = relationship("MediaAsset", back_populates="location")

@@ -20,19 +20,16 @@ def root():
 @app.get("/db-test")
 def db_test():
     with engine.connect() as connection:
-        result = connection.execute(
-            text("SELECT PostGIS_Version();")
-        )
-
-        version = result.scalar()
-
+        version = connection.execute(text("SELECT PostGIS_Version();")).scalar()
+        tables = connection.execute(text(
+            "SELECT table_name FROM information_schema.tables WHERE table_schema='public';"
+        )).fetchall()
     return {
         "database": "connected",
-        "postgis_version": version
+        "postgis_version": version,
+        "tables": [t[0] for t in tables],
     }
 
-
-    from .cloudinary_config import cloudinary
 
 
 @app.get("/cloudinary-test")
