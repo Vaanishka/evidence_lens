@@ -1,0 +1,50 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+**/venv/
+**/.venv/
+.env
+.env.*
+
+
+# FastAPI / Python
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Local database / temporary files
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated files
+dist/
+build/
+
+# Uploads / temporary datasets
+uploads/
